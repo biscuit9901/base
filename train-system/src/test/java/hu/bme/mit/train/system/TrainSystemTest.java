@@ -50,5 +50,13 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
-	
+	@Test
+	public void givenTable_whenGet_returnsSuccessfully() {
+		Table<Integer, Integer, Integer> table 
+		= HashBasedTable.create();
+		table.put(6, 4, 120);
+		table.put(8, 3, 60);
+
+		Assert.assertEquals(table.tableSize(), 2);
+	}
 }

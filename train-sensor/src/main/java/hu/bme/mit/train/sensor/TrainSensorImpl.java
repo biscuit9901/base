@@ -9,6 +9,7 @@ public class TrainSensorImpl implements TrainSensor {
 	private TrainController controller;
 	private TrainUser user;
 	private int speedLimit = 5;
+	Table<Integer, Integer, Integer> table = TreeBasedTable.create();
 
 	public TrainSensorImpl(TrainController controller, TrainUser user) {
 		this.controller = controller;
@@ -26,4 +27,13 @@ public class TrainSensorImpl implements TrainSensor {
 		controller.setSpeedLimit(speedLimit);
 	}
 
+	@Override
+	public void tachograf(int t, int ref, int con) {
+  		table.put(t, ref, con);
+	}
+
+	@Override
+	public int tableSize() {
+		return table.size();
+	}
 }
