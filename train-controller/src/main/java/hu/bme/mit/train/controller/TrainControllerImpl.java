@@ -25,7 +25,7 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public int getReferenceSpeed() {
-		return referenceSpeed;
+		return referenceSpeed
 	}
 
 	@Override
@@ -47,7 +47,7 @@ public class TrainControllerImpl implements TrainController {
 	}
 
 	private void emergencyBrake() {
-		not
+		
 	}
 
 }
