@@ -52,11 +52,11 @@ public class TrainSystemTest {
 
 	@Test
 	public void givenTable_whenGet_returnsSuccessfully() {
-		Table<Integer, Integer, Integer> table 
-		= HashBasedTable.create();
-		table.put(6, 4, 120);
-		table.put(8, 3, 60);
+		
 
-		Assert.assertEquals(table.tableSize(), 2);
+		sensor.tachograf(6, 4, 120);
+		sensor.tachograf(8, 3, 60);
+
+		Assert.assertEquals(sensor.tableSize(), 2);
 	}
 }
