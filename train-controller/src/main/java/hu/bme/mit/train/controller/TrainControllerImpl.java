@@ -47,7 +47,7 @@ public class TrainControllerImpl implements TrainController {
 	}
 
 	private void emergencyBrake() {
-		
+		not
 	}
 
 }
